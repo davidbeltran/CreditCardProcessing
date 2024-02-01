@@ -1,0 +1,23 @@
+<!--
+Programmer: Instructor
+Updates: David Beltran
+File: payment.html
+This file contains the credit card processing web page.
+-->
+<html>
+  <head>
+    <title>Credit Card Processor</title>
+  </head>
+  <body>
+    <h1>Enter Credit Card Information</h1>
+    <p>
+      <form method="POST" action="http://localhost:8000/make-payment">
+        <label>Enter Credit Card Number</label>
+        <input type='text' inputmode='numeric' pattern='(4|5|6)\d{3}-?\d{4}-?\d{4}-?\d{4}' placeholder="xxxx-xxxx-xxxx-xxxx" name='ccNum' autocomplete="off"/><br/>
+        <label>Enter amount $</label>
+        <input type='number' step='any' name='amount' autocomplete="off"/><br/>
+	      <input type="submit" value="Submit Transaction" />
+      </form>
+    </p>
+  </body>
+</html>
